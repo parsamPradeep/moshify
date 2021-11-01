@@ -1,3 +1,8 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 html {
   /* 62.55 OF 16px i,e 10px*/
   font-size: 62.5%;
@@ -110,9 +115,9 @@ a {
 
 /* Lists */
 .list {
+  color: var(--colour-heading);
   list-style: none;
   padding-left: 0;
-  color: var(--colour-heading);
 }
 
 .list--inline .list__item {
@@ -143,10 +148,68 @@ a {
   fill: var(--colour-primay);
 }
 .icon-conatiner {
-  background: #f3f9f8;
-  width: 64px;
-  height: 64px;
-  display: inline-flex;
-  justify-content: center;
   align-items: center;
+  background: #f3f9f8;
+  display: inline-flex;
+  height: 64px;
+  justify-content: center;
+  width: 64px;
+}
+
+/* Button */
+.btn {
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--colour-primay);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: #3a8ffd;
+}
+
+.btn--secondary {
+  background: var(--colour-secondary);
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #00c8eb;
+}
+
+.btn--accent {
+  background: var(--colour-accent);
+  color: #fff;
+}
+.btn--accent:hover {
+  background: #ec3000;
+}
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+.btn--outline {
+  background: #fff;
+  color: var(--colour-heading);
+  border: 2px solid var(--colour-heading);
+}
+
+.btn--outline:hover {
+  background: var(--colour-heading);
+  color: #fff;
+}
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
